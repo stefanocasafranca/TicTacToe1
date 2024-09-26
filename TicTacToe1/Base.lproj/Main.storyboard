@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2sG-Ii-mxx">
+                                <rect key="frame" x="78.666666666666686" y="281" width="236" height="290.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cp-22-Oqk">
+                                        <rect key="frame" x="53.999999999999986" y="0.0" width="128" height="34.333333333333336"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Restart Game"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1s2-lW-FsW">
+                                        <rect key="frame" x="0.0" y="54.333333333333314" width="236" height="236"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G6P-Ot-b5f">
+                                                <rect key="frame" x="0.0" y="0.0" width="236" height="72"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTf-o2-22k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="72" id="TyM-DI-31R"/>
+                                                            <constraint firstAttribute="width" constant="72" id="ip5-Ld-HSw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shf-hq-Us0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg9-Di-WzF">
+                                                        <rect key="frame" x="81.999999999999986" y="0.0" width="72.000000000000014" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="72" id="UQD-4w-BBq"/>
+                                                            <constraint firstAttribute="width" constant="72" id="eG6-3S-0aJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9u-oT-DAB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bud-Jx-Jne">
+                                                        <rect key="frame" x="164" y="0.0" width="72" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="4cu-cB-We4"/>
+                                                            <constraint firstAttribute="height" constant="72" id="VN4-3T-NbE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqm-Y1-QVb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tKG-iQ-t0c">
+                                                <rect key="frame" x="0.0" y="82" width="236" height="72"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm9-2M-Inb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="X3n-nm-rVR"/>
+                                                            <constraint firstAttribute="height" constant="72" id="vbX-9D-hsc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1j-Gv-Kcy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KO-Pd-9TG">
+                                                        <rect key="frame" x="81.999999999999986" y="0.0" width="72.000000000000014" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="NYs-Lh-ct4"/>
+                                                            <constraint firstAttribute="height" constant="72" id="rTf-QN-sPL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqi-8P-4rF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y39-O6-nHq">
+                                                        <rect key="frame" x="164" y="0.0" width="72" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="V3m-9y-j2O"/>
+                                                            <constraint firstAttribute="height" constant="72" id="me6-nw-jou"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogb-wa-H40"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a82-5f-MUM">
+                                                <rect key="frame" x="0.0" y="164" width="236" height="72"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTS-fG-3YI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="72" id="LVJ-cd-fHB"/>
+                                                            <constraint firstAttribute="width" constant="72" id="skY-uc-aWl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OP-E5-gkb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-no-lVs">
+                                                        <rect key="frame" x="81.999999999999986" y="0.0" width="72.000000000000014" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="72" id="L8u-iK-bkB"/>
+                                                            <constraint firstAttribute="width" constant="72" id="lC2-wS-2jK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ov-Uo-3qd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-N8-orS">
+                                                        <rect key="frame" x="164" y="0.0" width="72" height="72"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="72" id="Hev-bu-owF"/>
+                                                            <constraint firstAttribute="height" constant="72" id="gxe-uM-D9d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="10" height="10"/>
+                                                        <state key="normal" title="X"/>
+                                                        <connections>
+                                                            <action selector="selectCellBy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RO2-D6-aA4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2sG-Ii-mxx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xrx-x6-orV"/>
+                            <constraint firstItem="2sG-Ii-mxx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wj8-Gi-INO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLeftButton" destination="VTS-fG-3YI" id="aIg-De-dO4"/>
+                        <outlet property="bottomMiddleButton" destination="mA3-no-lVs" id="Hid-hD-sa3"/>
+                        <outlet property="bottomRightButton" destination="gBg-N8-orS" id="Cr1-5W-10J"/>
+                        <outlet property="middleLeftButton" destination="gm9-2M-Inb" id="wTK-Fc-IqK"/>
+                        <outlet property="middleMiddleButton" destination="0KO-Pd-9TG" id="7Nd-iC-vuS"/>
+                        <outlet property="middleRightButton" destination="Y39-O6-nHq" id="qED-G0-QBD"/>
+                        <outlet property="topLeftButton" destination="jTf-o2-22k" id="FPu-F4-4bN"/>
+                        <outlet property="topMiddleButton" destination="yg9-Di-WzF" id="zVD-2X-JEf"/>
+                        <outlet property="topRightButton" destination="Bud-Jx-Jne" id="idu-bl-Dpv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
