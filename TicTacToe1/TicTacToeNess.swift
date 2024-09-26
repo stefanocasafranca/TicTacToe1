@@ -62,7 +62,7 @@ struct Game {
         default: return S
         }
     }
-
+    
     
     mutating func canPlaceMarkAt(tag:Int) -> Bool {
         switch tag {
@@ -142,22 +142,47 @@ struct Game {
         
         return .NoTicTacToe
     }
-
-        
-        func display(){
-            let BAR = "|"
-            let firstRow = S + topLeft + S + BAR + S + topMiddle + S + BAR + S + topRight
-            let separator = "---+---+---"
-            print (firstRow)
-            print(separator)
-            let secondRow = S + middleLeft + S + BAR + S + middleMiddle + S + BAR + S + middleRight
-            print (secondRow)
-            print(separator)
-            let thirdRow = S + bottomLeft + S + BAR + S + bottomMiddle + S + BAR + S + bottomRight
-            print(thirdRow )
-        }
+    
+    
+    func display(){
+        let BAR = "|"
+        let firstRow = S + topLeft + S + BAR + S + topMiddle + S + BAR + S + topRight
+        let separator = "---+---+---"
+        print (firstRow)
+        print(separator)
+        let secondRow = S + middleLeft + S + BAR + S + middleMiddle + S + BAR + S + middleRight
+        print (secondRow)
+        print(separator)
+        let thirdRow = S + bottomLeft + S + BAR + S + bottomMiddle + S + BAR + S + bottomRight
+        print(thirdRow )
     }
     
+}
     var myGame = Game()
     
+    let cellsInTicTacToe: [TicToeNess: [Int]] =
+    [
+        .NoTicTacToe:      [],
+        .FirstRow:         [0,1,2],
+        .MiddleRow:        [3,4,5],
+        .BottomRow:        [6,7,8],
+        .LeftColumn:       [0,3,6],
+        .MiddleColumn:     [1,4,7],
+        .RightColumn:      [2,5,8],
+        .ForwardsDiagonal: [2,4,6],
+        .BackwardDiagonal: [0,4,8]
+    ]
     
+    let ticTacToesUsingCellTag: [Int: [TicToeNess]] = [
+        0: [.FirstRow, .LeftColumn, .BackwardDiagonal],
+        1: [.FirstRow,  .MiddleColumn],
+        2: [.FirstRow, .RightColumn, .ForwardsDiagonal],
+        3: [.MiddleRow,  .LeftColumn],
+        4: [.MiddleRow, .MiddleColumn, .ForwardsDiagonal, .BackwardDiagonal],
+        5: [.MiddleRow, .RightColumn],
+        6: [.BottomRow, .LeftColumn, .ForwardsDiagonal],
+        7: [.BottomRow, .MiddleColumn],
+        8: [.FirstRow, .RightColumn, .BackwardDiagonal]
+        
+    ]
+
