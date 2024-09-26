@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             myGame.placeMarkAt(tag: tag)
             let mark = myGame.markPlacedAt(tag: tag)
             let kindOfTicTacToe = myGame.haveTicTacToe(tag: tag)
-            //highlughtCellsWithTicTacToe(ofKind:kindOfTicTacToe, andColor: .red)
+            //highlightCellsWithTicTacToe(ofKind:kindOfTicTacToe, andColor: .red)
             sender.setTitle(mark, for: .normal)
         }
         
